@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Estructura de Tablas -->
+    <table border="1" cellspacing="8" cellpadding="8">
+      <caption>
+        Titulo de tabla
+      </caption>
+      <thead>
+        <th>Encabezado 1</th>
+        <th>Encabezado 2</th>
+        <th>Encabezado 3</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dato 1</td>
+          <td>Dato 2</td>
+          <td>Dato 3</td>
+        </tr>
+        <tr>
+          <td>Dato 4</td>
+          <td>Dato 5</td>
+          <td>Dato 6</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Pie 1</td>
+          <td>Pie 2</td>
+          <td>Pie 3</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Etiquetas Multimedia -->
+    <img
+      src="./grapefruit-slice.jpg"
+      height="200px"
+      width="400px"
+      alt="Naranja"
+      title="Cortada"
+    />
+
+    <video src="./flower.webm" width="300px" controls>
+      No se puede reproducir el video.
+    </video>
+
+    <audio src="./t-rex-roar.mp3" controls>
+      No se puede reproducir el audio.
+    </audio>
+
+    <iframe src="../Presentaciones/Intro.pdf" frameborder="0" width="600px">
+      No se puede visualizar el PDF.
+    </iframe>
+
+    <!-- Formularios -->
+    <form action="#" method="GET" enctype="multipart/form-data">
+      <!--<input name="..." type="text" />
+      <input name="..." type="password" />
+      <input name="..." type="radio" value="Opción 1" />
+      <input name="..." type="checkbox" value="Opción 2" />
+      <input name="..." type="color" />
+      <input name="..." type="email" />
+      <input name="..." type="file" />
+      <input name="..." type="hidden" />
+      <input name="..." type="image" />
+      <input name="..." type="number" />
+      <input name="..." type="range" />
+      <input name="..." type="search" />
+      <input name="..." type="tel" />
+      <input name="..." type="time" />
+      <input name="..." type="date" />
+      <input name="..." type="datetime" />
+      <input name="..." type="datetime-local" />
+      <input name="..." type="week" />
+      <input name="..." type="month" />
+      <input name="..." type="url" />
+      <input name="..." type="submit" value="Submit" />
+      <input name="..." type="reset" value="Reset" />
+      <input name="..." type="button" value="Button" />
+
+      <input name="nombreCompleto" type="text" value="Candela Yarossi"> 
+        
+      <textarea name="descripcion"></textarea>
+
+      <select name="talles" multiple>
+        <option value="L">Large</option>
+        <option value="M">Medium</option>
+        <option value="S">Small</option>
+      </select>-->
+
+      <div>
+        <label for="nombre">Ingrese su nombre aquí:</label>
+        <input type="text" name="nombre" />
+      </div>
+
+      <div>
+        <label for="talles">Seleccione el talle:</label>
+        <select name="talles" multiple>
+          <option value="L">Large</option>
+          <option value="M">Medium</option>
+          <option value="S">Small</option>
+        </select>
+      </div>
+
+      <input type="submit" value="Enviar" />
+      <input type="reset" value="Limpiar" />
+      <input type="button" value="Boton" />
+    </form>
+
+    <!-- Elemento de Bloque -->
+    <div style="background-color: yellow">Esto es un div</div>
+    <br />
+    <!-- Elemento en línea -->
+    <span style="background-color: yellow">Esto es un span</span>
+  </body>
+</html>

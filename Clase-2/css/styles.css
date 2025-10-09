@@ -1,0 +1,66 @@
+/* SELECTORES */
+p {
+  background-color: lightpink;
+  /*color: deeppink;*/
+}
+
+.textoNegrita {
+  font-weight: bold;
+}
+
+.textoBlanco {
+  color: white;
+  font-weight: lighter;
+}
+
+#parrafo3 {
+  font-size: 30px;
+}
+
+/* BOX MODEL */
+p {
+  /* Alto y Ancho */
+  width: 300px;
+  height: 300px;
+
+  /* Márgenes: espaciado externo */
+  /* 4 márgenes iguales */
+  margin: 30px;
+  /* arriba/abajo - izq/der */
+  margin: 30px 40px;
+  /* arriba - der - abajo - izq */
+  margin: 10px 20px 30px 40px;
+
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+
+  /* Padding: espaciado interno */
+  /* 4 rellenos iguales */
+  padding: 20px;
+  /* arriba/abajo - izq/der */
+  padding: 30px 40px;
+  /* arriba - der - abajo - izq */
+  padding: 10px 20px 30px 40px;
+
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+
+  /* Bordes */
+  border-width: 4px;
+  border-color: deeppink;
+  border-style: dashed;
+
+  border: double green 3px;
+
+  border-top: solid 5px red;
+  border-right: solid 10px blue;
+  border-bottom: solid 7px green;
+  border-left: solid 12px yellow;
+
+  /* Redondeo de bordes */
+  border-radius: 15px;
+}

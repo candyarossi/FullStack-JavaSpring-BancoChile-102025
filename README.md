@@ -11,3 +11,4 @@
 
 - [Introducción (ppt)](./Presentaciones/)
 - [Clase 1: HTML](./Clase-1/)
+- [Clase 2: Introducción a CSS](./Clase-2/)
