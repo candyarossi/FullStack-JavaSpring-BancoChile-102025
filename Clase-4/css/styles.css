@@ -1,0 +1,45 @@
+/* DISPLAY */
+
+div {
+  background-color: lightgreen;
+  /* display: inline; */
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+}
+
+span {
+  background-color: lightblue;
+  display: block;
+  margin: 10px;
+  padding: 10px;
+}
+
+div {
+  display: none;
+  /* visibility: hidden;
+   opacity: 0; */
+}
+
+/* POSITION */
+
+div {
+  display: inline-block;
+  margin: 0 10px;
+  height: 100px;
+  width: 100px;
+  background-color: lightcoral;
+  border: solid 1px red;
+  border-radius: 50%;
+}
+
+#div2 {
+  position: sticky;
+  /* Otros valores: static (por defecto), relative, absolute, fixed, sticky. */
+  top: 40px;
+  left: 40px;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  /* Otros valores: visible (por defecto), hidden, scroll, auto. */
+}

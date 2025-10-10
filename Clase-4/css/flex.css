@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.padre-flex span,
+.padre-flex-2 span,
+.padre-flex-3 span {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  border: solid 1px red;
+}
+
+.padre-flex span {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  font-size: 50px;
+}
+
+.padre-flex-2 span {
+  background-color: coral;
+}
+
+.padre-flex-3 span {
+  background-color: darkorange;
+  font-size: 150px;
+}
+
+.padre-flex,
+.padre-flex-2,
+.padre-flex-3 {
+  width: 1420px;
+  height: 500px;
+  background-color: bisque;
+  margin: 10px 10px 10px 10px;
+}
+
+/* FLEXBOX */
+
+.padre-flex,
+.padre-flex-2,
+.padre-flex-3 {
+  /* Convertimos el elemento en Flex */
+  display: flex;
+
+  /* Asignamos la dirección en la que se organizan los elementos. 
+    Puede ser: row (por defecto), column, row-reverse o column-reverse. */
+  flex-direction: row;
+
+  /* Asignamos la capacidad de saltar de línea en caso de ser necesario para conservar tamaños.
+    Puede ser: nowrap (por defecto), wrap o wrap-reverse. */
+  flex-wrap: wrap;
+
+  /* Podemos agrupar estas propiedades, primero el valor de flex-direction y luego el de flex-wrap. */
+  flex-flow: row wrap;
+
+  /* Asignamos el tipo de alineación del los items. 
+    Puede ser: flex-start (por defecto), flex-end, center, space-between, space-around o space-evenly */
+  justify-content: flex-start;
+
+  /* Todo esto se aplica también a flex-direction: column; */
+}
+
+.padre-flex-2 {
+  /* Alineación de los elementos hijos, con flex-direction: row o column.
+    Puede ser: stretch (por defecto), flex-end, flex-start, center o baseline */
+  align-items: stretch;
+}
+
+.padre-flex-3 {
+  /* Alinear varias líneas de elementos hijos. 
+    Puede ser: stretch (por defecto), flex-start, flex-end, center, space-between, space-around o space-evenly */
+  align-content: stretch;
+}
