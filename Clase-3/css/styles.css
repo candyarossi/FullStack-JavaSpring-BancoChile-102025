@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* SELECTORES BÁSICOS */
+
+/* Selector por nombre de tag / etiqueta */
+h1 {
+  color: green;
+}
+
+/* Selector Class */
+/* class="textoBlanco tamanoMediano" */
+.textoBlanco {
+  color: white;
+}
+
+.tamanoMediano {
+  font-size: medium;
+}
+
+/* Selector ID */
+/* id="tituloPrincipal" */
+#tituloPrincipal {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SELECTORES AVANZADOS */
+
+/* Selector Universal */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Selector Descendente */
+#div1 p {
+  color: slategray;
+  font-style: italic;
+}
+
+#div2 span img {
+  height: 50px;
+}
+
+/* Selector Descendente Directo */
+#div2 > img {
+  height: 50px;
+}
+
+/* Selector de Atributo */
+input[type="text"] {
+  border: none;
+  border-bottom: 2px solid rebeccapurple;
+}
+
+input[type="submit"] {
+  background-color: rebeccapurple;
+  color: white;
+}
+
+/* PROPIEDADES DE TEXTOS */
+body {
+  background-color: blanchedalmond;
+}
+
+p {
+  color: crimson;
+  color: #525252;
+  color: rgb(98, 56, 109);
+  color: rgba(98, 56, 109, 0.9);
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: right;
+  /* 
+    Otros valores: 
+        left
+        right
+        center 
+        justify 
+    */
+  text-decoration: underline solid;
+  /* 
+    Otros valores: 
+        none
+        underline 
+        line-through 
+    */
+  text-transform: capitalize;
+  /* 
+    Otros valores: 
+        uppercase
+        lowercase 
+        capitalize 
+    */
+  line-height: 29px;
+
+  /*background-color: rgb(224, 255, 255, 0.7);*/
+}
+
+/* PROPIEDADES DE FONDOS */
+body {
+  background-color: blanchedalmond;
+  background-image: url("../media/fondo.jpg");
+  background-size: cover;
+  /*
+    Otros valores:
+        contain
+        cover
+        auto
+    */
+  background-repeat: no-repeat;
+  /* 
+    Otros valores:
+        repeat-x
+        repeat-y
+        repeat
+        space
+        round
+        no-repeat
+        space repeat
+    */
+  background-position: center center;
+  /* 
+    Combinaciones: 
+        top left
+        top center
+        top right
+        center left
+        center center
+        center right
+        bottom left
+        bottom center
+        bottom right
+    */
+  background-attachment: fixed;
+  /* 
+    Otros valores:
+        scroll
+        fixed 
+     */
+}
+
+/* TIPOGRAFIAS */
+@font-face {
+  font-family: "Stick";
+  src: url("../fonts/StickNoBills-Regular.ttf");
+}
+
+p {
+  /* Fuentes disponibles en el Sist. Operativo */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* Fuente @font-face */
+  font-family: "Stick";
+  /* Fuente Google Fonts */
+  font-family: "Open Sans", sans-serif;
+}
