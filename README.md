@@ -11,9 +11,10 @@
 
 - [Introducción (ppt)](./Presentaciones/)
 - [Clase 1: HTML](./Clase-1/)
-- [Clase 2: Introducción a CSS](./Clase-2/)
-- [Clase 3: CSS Avanzado I](./Clase-3/)
-- [Clase 4: CSS Avanzado II](./Clase-4/)
+- [Clase 2: Introducción a CSS I](./Clase-2/)
+- [Clase 3: Introducción a CSS II](./Clase-3/)
+- [Clase 4: CSS Avanzado I](./Clase-4/)
+- [Clase 5: CSS Avanzado II](./Clase-5/)
 <!-- - [Clase 5: Git + Github](./Clase-/)
 - [Clase 6: Frameworks CSS](./Clase-/)
 - [Clase 7: Fundamentos de Javascript I](./Clase-/)

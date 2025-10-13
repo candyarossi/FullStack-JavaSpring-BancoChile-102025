@@ -1,0 +1,12 @@
+#productos div,
+#servicios div {
+    border: solid 1px;
+    padding: 5px;
+    background-color: bisque;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+/* GRIDS */
