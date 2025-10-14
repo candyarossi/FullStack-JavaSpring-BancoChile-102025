@@ -1,12 +1,184 @@
-#productos div,
-#servicios div {
-    border: solid 1px;
-    padding: 5px;
-    background-color: bisque;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.border {
-    border: 1px solid black;
+/* MEDIA QUERIES */
+
+/* ANCHO DE PANTALLA 
+
+Móviles en vertical     -> 320px
+Móviles en horizontal   -> 480px
+Tablets                 -> 768px
+Escritorio pequeñas     -> 1024px
+Escritorio grandes      -> 1280px
+*/
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px;
+}
+
+.container {
+  display: flex;
+  /*border: solid 1px red;*/
+  flex-wrap: wrap;
+}
+
+/* DESKTOP FIRST */
+/* Código del dispositivo grande */
+.item {
+  width: 25%;
+  margin: 5px;
+  padding: 20px;
+  background-color: lightgray;
+}
+
+/* Código del dispositivo mediano: 0 - 768px */
+@media (max-width: 768px) {
+  .item {
+    width: 40%;
+  }
+}
+
+/* Código del dispositivo pequeño: 0 - 590px */
+@media (max-width: 590px) {
+  .item {
+    width: 95%;
+  }
+  h1 {
+    color: cadetblue;
+  }
+}
+
+/* Condición -> 590px - 890px */
+@media (min-width: 590px) and (max-width: 890px) {
+  .item {
+    background-color: lightpink;
+  }
+}
+
+/* Condición -> 0 - 1024px u Horizontal */
+@media (max-width: 1024px) or (orientation: landscape) {
+  .item {
+    background-color: lightskyblue;
+  }
+}
+
+/* MOBILE FIRST */
+/* Código del dispositivo pequeño: 0px */
+.item {
+  width: 95%;
+  margin: 5px;
+  padding: 20px;
+  background-color: lightgray;
+}
+
+/* Código del dispositivo mediano: 768px - inf */
+@media (min-width: 768px) {
+  .item {
+    width: 40%;
+  }
+}
+
+/* Código del dispositivo grande: 1024px - inf */
+@media (min-width: 1024px) {
+  .item {
+    width: 25%;
+  }
 }
 
 /* GRIDS */
+
+#productos div,
+#servicios div {
+  border: solid 1px;
+  padding: 5px;
+  background-color: bisque;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+#grilla {
+  display: grid;
+  /* Definimos cantidad y tamaño de filas y columnas */
+  grid-template-columns: 20% auto 20%;
+  grid-template-rows: 100px auto auto 75px;
+  /* En grid-template-areas podemos dejar secciones vacías con none o . */
+  grid-template-areas: "header header header" "menuNav productos publicidad" "menuNav servicios ." "contacto contacto contacto";
+  /* Aplicamos espacios/márgenes/huecos(gutters) entre las celdas */
+  gap: 10px;
+  /* Entre columnas */
+  column-gap: 15px;
+  /* Entre filas */
+  row-gap: 20px;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: menuNav;
+}
+
+#productos {
+  grid-area: productos;
+}
+
+#servicios {
+  grid-area: servicios;
+}
+
+aside {
+  grid-area: publicidad;
+}
+
+footer {
+  grid-area: contacto;
+}
+
+#productos,
+#servicios {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  height: 250px;
+}
+
+#productos {
+  /* Modificamos la posición de los hijos desde el padre */
+  /* Eje HORIZONTAL */
+  /* Valores: start, end, center, stretch (por defecto) */
+  justify-items: stretch;
+  /* Eje VERTICAL */
+  /* Valores: start, end, center, stretch (por defecto) */
+  align-items: stretch;
+}
+
+#servicios {
+  /* Alineamos items en conjunto */
+  /* Eje HORIZONTAL */
+  /* Valores: start, end, center, space-between, space-around, space-evenly, stretch (por defecto) */
+  justify-content: stretch;
+  /* Eje VERTICAL */
+  /* Valores: start, end, center, space-between, space-around, space-evenly, stretch (por defecto) */
+  align-content: stretch;
+}
+
+.serv1 {
+  /* Modificamos la posición del elemento hijo seleccionado */
+  /* Eje HORIZONTAL */
+  /* Valores: start, end, center, stretch (por defecto) */
+  justify-self: center;
+  /* Eje VERTICAL */
+  /* Valores: start, end, center, stretch (por defecto) */
+  align-self: center;
+}
