@@ -15,6 +15,7 @@
 - [Clase 3: Introducción a CSS II](./Clase-3/)
 - [Clase 4: CSS Avanzado I](./Clase-4/)
 - [Clase 5: CSS Avanzado II](./Clase-5/)
+- [EXTRA: Guía sobre Grillas CSS](./Extra-Grids/resumen.md)
 <!-- - [Clase 5: Git + Github](./Clase-/)
 - [Clase 6: Frameworks CSS](./Clase-/)
 - [Clase 7: Fundamentos de Javascript I](./Clase-/)
