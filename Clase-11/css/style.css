@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0.5rem;
+  background-color: #f0f0f0;
+  margin-bottom: 5px;
+}
+
+.enlaces {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.otraClase {
+  color: red;
+}
+
+.nuevaClase {
+  font-weight: bold;
+}
