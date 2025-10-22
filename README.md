@@ -22,8 +22,8 @@
 - [Clase 9: Fundamentos de Javascript II](./Clase-9/js/)
 - [Clase 10: Javascript](./Clase-10/js/)
 - [Clase 11: DOM](./Clase-11/js/)
-<!-- - [Clase 12: Eventos](./Clase-/)
-- [Repaso para Examen](./Clase-/)
+- [Clase 12: Eventos](./Clase-12/js/)
+<!-- - [Repaso para Examen](./Clase-/)
 - [Extra 1: API's y AJAX](./Clase-/)
 - [Extra 2: Modales](./Clase-/)
 
