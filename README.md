@@ -24,7 +24,7 @@
 - [Clase 11: DOM](./Clase-11/js/)
 - [Clase 12: Eventos](./Clase-12/js/)
 - [Repaso para Examen](./Repaso-FW/)
-<!-- - [Extra 1: API's y AJAX](./Clase-/)
-- [Extra 2: Modales](./Clase-/)
+- [Extra 1: API's y AJAX](./Extra-APIs/)
+<!-- - [Extra 2: Modales](./Clase-/)
 
 ## Fundamentos de Java
