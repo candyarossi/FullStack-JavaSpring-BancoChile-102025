@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="./css/modal.css" /> -->
+    <title>PokeAPI</title>
+  </head>
+  <body>
+    <h1>
+      PokeAPI
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/640px-Pokebola-pokeball-png-0.png"
+        id="pokeball"
+      />
+    </h1>
+    <ul id="menu">
+      <li><button id="poke">¡Random Pokemon!</button></li>
+      <li>
+        <select name="type" id="type">
+          <option value="" disabled selected>Pokemon Type</option>
+        </select>
+      </li>
+      <li>
+        <select name="color" id="color">
+          <option value="" disabled selected>Pokemon Color</option>
+        </select>
+      </li>
+      <li><button id="berry">¡Random Berry!</button></li>
+    </ul>
+    <div id="respuesta"></div>
+    <div id="modal">
+      <div id="modal-content"></div>
+    </div>
+    <script src="./js/main.js"></script>
+    <!-- <script src="./js/modal.js"></script> -->
+  </body>
+</html>
