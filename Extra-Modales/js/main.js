@@ -8,11 +8,11 @@ window.onload = async () => {
   let selectColor = document.getElementById("color");
 
   for (const type of types.results) {
-    selectType.innerHTML += "<option>" + type.name + "</option>";
+    selectType.innerHTML += "<option>" + capitalize(type.name) + "</option>";
   }
 
   for (const color of colors.results) {
-    selectColor.innerHTML += "<option>" + color.name + "</option>";
+    selectColor.innerHTML += "<option>" + capitalize(color.name) + "</option>";
   }
 };
 
@@ -34,7 +34,7 @@ document.querySelector("#poke").onclick = async () => {
   respuesta.innerHTML = "";
 
   respuesta.innerHTML = `
-        <div class="pokeInfo">
+        <div class="pokeInfo" onclick="abrirModal(this)">
             <img src="${pokemon.sprites.front_default}">
             <h3>${pokemon.name.toUpperCase()}</h3>
         </div>
@@ -55,7 +55,7 @@ document.querySelector("#type").onchange = async (event) => {
     let pokeInfo = await getByURL(poke.pokemon.url);
 
     respuesta.innerHTML += `
-        <div class="pokeInfo">
+        <div class="pokeInfo" onclick="abrirModal(this)">
             <img src="${pokeInfo.sprites.front_default}">
             <h3>${pokeInfo.name.toUpperCase()}</h3>
         </div>
@@ -81,9 +81,9 @@ document.querySelector("#color").onchange = async (event) => {
     );
 
     respuesta.innerHTML += `
-        <div class="pokeInfo">
+        <div class="pokeInfo" onclick="abrirModal(this)">
             <img src="${pokeInfo.sprites.front_default}">
-            <h3>${pokeInfo.name.toUpperCase()}</h3>
+            <h3 style="color: ${value}">${pokeInfo.name.toUpperCase()}</h3>
         </div>
         `;
   }
@@ -107,3 +107,10 @@ document.querySelector("#berry").onclick = async (e) => {
     berry.name.toUpperCase() +
     "!</h3></div>";
 };
+
+// Esta función en algunos lenguajes ya viene implementada, no es el caso de JS
+// Se dedica a dejar una frase o palabra con su primera letra en mayúsculas
+// Y el resto en minúsculas.
+function capitalize(str) {
+  return str[0].toUpperCase() + str.substr(1).toLowerCase();
+}
