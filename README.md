@@ -30,3 +30,4 @@
 ## Fundamentos de Java
 
 - [Clase 1: Introducción a Java](./Java/Clase-1/)
+- [Clase 2: Estructuras Compuestas](./Java/Clase-2/)
