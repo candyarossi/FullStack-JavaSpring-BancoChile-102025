@@ -31,3 +31,4 @@
 
 - [Clase 1: Introducción a Java](./Java/Clase-1/)
 - [Clase 2: Estructuras Compuestas](./Java/Clase-2/)
+- [Clase 3: Clases y Objetos I](./Java/Clase-3/)

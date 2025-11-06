@@ -1,6 +1,7 @@
 import clases.Calculadora;
 import java.util.Date;
 import java.util.HashMap;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -119,5 +120,19 @@ public class Application {
         for (String clave : claves) {
             System.out.println("Clave: " + clave + ", Valor: " + personas.get(clave));
         }
+
+        // EXCEPCIONES
+        char[] letras = { 'a', 'b', 'c' };
+
+        try {
+            System.out.println(letras[0]);
+            System.out.println(letras[4]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println("Siguiente código");
     }
 }
