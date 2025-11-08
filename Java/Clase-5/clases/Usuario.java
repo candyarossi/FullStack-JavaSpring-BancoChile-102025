@@ -2,9 +2,10 @@ package clases;
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.format.DateTimeFormatter;
 
-public class Usuario {
+import interfaces.ManejoDeFechas;
+
+public abstract class Usuario implements ManejoDeFechas {
     // ATRIBUTOS
     public static int incrementId = 1;
     private int id;
@@ -12,7 +13,6 @@ public class Usuario {
     private LocalDate fechaNacimiento;
     private int edad;
     private String email;
-    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     // METODOS CONTRUCTORES
     public Usuario() {
@@ -25,7 +25,7 @@ public class Usuario {
 
     public Usuario(String nombre, String fechaNacimiento, String email) {
         this.nombre = nombre;
-        this.fechaNacimiento = LocalDate.parse(fechaNacimiento, formatter);
+        this.fechaNacimiento = formatearFecha(fechaNacimiento);
         this.edad = this.calcularEdad();
         this.email = email;
         this.id = Usuario.incrementId;
@@ -46,7 +46,7 @@ public class Usuario {
     }
 
     public void setFechaNacimiento(String fechaNacimiento) {
-        this.fechaNacimiento = LocalDate.parse(fechaNacimiento, formatter);
+        this.fechaNacimiento = formatearFecha(fechaNacimiento);
         this.edad = calcularEdad();
     }
 
@@ -69,6 +69,8 @@ public class Usuario {
     public static int getIncrementId() {
         return incrementId;
     }
+
+    public abstract String verCalificaciones();
 
     // METODOS DE INSTANCIA
     private int calcularEdad() {

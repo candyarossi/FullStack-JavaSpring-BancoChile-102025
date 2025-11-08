@@ -34,3 +34,4 @@
 - [Clase 3: Clases y Objetos I](./Java/Clase-3/)
 - [Clase 4: Clases y Objetos II](./Java/Clase-4/)
 - [Actividad Práctica](./Java/Practica-Biblioteca/)
+- [Clase 5: Clases y Objetos III](./Java/Clase-5/)

@@ -37,8 +37,16 @@ public class Instructor extends Usuario {
     }
 
     @Override
-    public String toString() {
-        return super.toString() + " (Instructor) -> " + bootcamps + ", " + alumnos + ".";
+    public String verCalificaciones() {
+        String str = "Estudiantes: \n";
+        for (Estudiante alumno : alumnos) {
+            str += alumno.verCalificaciones() + "\n";
+        }
+        return str;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + " (Instructor) -> [" + bootcamps + "], [" + alumnos + "].";
+    }
 }
