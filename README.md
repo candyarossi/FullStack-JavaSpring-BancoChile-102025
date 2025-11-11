@@ -9,7 +9,7 @@
 
 ## Fundamentos de la Web
 
-- [Introducción (ppt)](./Fundamentos-Web/Presentaciones/)
+- [Introducción (ppt)](./Fundamentos-Web/Presentaciones/Intro.pdf)
 - [Clase 1: HTML](./Fundamentos-Web/Clase-1/)
 - [Clase 2: Introducción a CSS I](./Fundamentos-Web/Clase-2/)
 - [Clase 3: Introducción a CSS II](./Fundamentos-Web/Clase-3/)
@@ -35,3 +35,8 @@
 - [Clase 4: Clases y Objetos II](./Java/Clase-4/)
 - [Actividad Práctica](./Java/Practica-Biblioteca/)
 - [Clase 5: Clases y Objetos III](./Java/Clase-5/)
+
+## Bases de Datos
+
+- [Clase 1: Introducción a Bases de Datos](./MySQL/Clase-1/)
+- [Clase 1: Normalización (pdf)](<./MySQL/Clase-1/Normalización%20-%20Formas%20Normales%20-%20Banco%20de%20Chile%20(Oct%202025).pdf>)
