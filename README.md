@@ -40,3 +40,5 @@
 
 - [Clase 1: Introducción a Bases de Datos](./MySQL/Clase-1/)
 - [Clase 1: Normalización (pdf)](<./MySQL/Clase-1/Normalización%20-%20Formas%20Normales%20-%20Banco%20de%20Chile%20(Oct%202025).pdf>)
+- [Clase 2: Diagramas Entidad - Relación](./MySQL/Clase-2/)
+- [Actividad Práctica](./MySQL/Practica-Transporte/)
