@@ -43,3 +43,4 @@
 - [Clase 2: Diagramas Entidad - Relación](./MySQL/Clase-2/)
 - [Actividad Práctica](./MySQL/Practica-Transporte/)
 - [Clase 3: MySQL Queries I](./MySQL/Clase-3/)
+- [Clase 4: MySQL Queries II](./MySQL/Clase-4/)
