@@ -2,17 +2,16 @@ package com.oct2025.tiendaVideojuegos.controllers;
 
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.oct2025.tiendaVideojuegos.interfaces.ManejoDeFechas;
 import com.oct2025.tiendaVideojuegos.models.Videojuego;
 
-@RestController
+@Controller
 public class ControladorVideojuegos implements ManejoDeFechas {
 
     private ArrayList<Videojuego> videojuegos;
@@ -33,18 +32,15 @@ public class ControladorVideojuegos implements ManejoDeFechas {
         this.videojuegos.add(v3);
     }
 
-    @RequestMapping(value = "/saludo", method = RequestMethod.GET)
-    public String inicio() {
-        return "Hola Spring Boot!";
+    @GetMapping("/pruebas")
+    public String pruebas() {
+        return "pruebas.jsp";
     }
 
     @GetMapping("/getAll")
-    public String getVideojuegos() {
-        String str = "";
-        for (Videojuego v : this.videojuegos) {
-            str += v.toString();
-        }
-        return str;
+    public String getVideojuegos(Model modelo) {
+        modelo.addAttribute("videojuegos", this.videojuegos);
+        return "videojuegos.jsp";
     }
 
     // Párametros de consulta -> Query String
