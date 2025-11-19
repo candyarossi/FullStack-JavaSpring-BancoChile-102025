@@ -1,5 +1,6 @@
 package com.oct2025.tiendaVideojuegos.controllers;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
@@ -98,7 +99,7 @@ public class ControladorVideojuegos implements ManejoDeFechas {
                 nombre,
                 descripcion,
                 portada,
-                formatearFecha(fecha_lanzamiento),
+                LocalDate.parse(fecha_lanzamiento, formatter2),
                 Double.parseDouble(rating));
         this.videojuegos.add(juego);
         return "redirect:/getAll";
