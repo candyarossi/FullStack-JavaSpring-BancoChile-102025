@@ -28,7 +28,7 @@
 			                <img src="${juego.portada}"/>
 			                <h3>${juego.nombre}</h3>
 			                <a href="/detail/${juego.id}">Detalles</a>
-				            <%-- <a class="precio" href="/buy/${juego.id}">$${juego.precio}</a> --%>
+				            <a class="precio" href="/buy/${juego.id}">$${juego.precio}</a>
 			            </li>
 		            </c:forEach>
 	            </ul>
