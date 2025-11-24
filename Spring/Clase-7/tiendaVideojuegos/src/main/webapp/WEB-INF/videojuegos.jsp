@@ -29,6 +29,11 @@
 			                <img src="${juego.portada}"/>
 			                <h3>${juego.nombre}</h3>
 			                <a href="/detail/${juego.id}">Detalles</a>
+							<a href="/form/edit/${juego.id}">Editar</a>
+							<form action="/delete/${juego.id}" method="POST">
+								<input type="hidden" name="_method" value="DELETE"/>
+								<button>Eliminar</button>
+							</form>
 				            <a class="precio" href="/buy/${juego.id}">$${juego.precio}</a>
 			            </li>
 		            </c:forEach>
