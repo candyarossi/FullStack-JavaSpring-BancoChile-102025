@@ -1,11 +1,15 @@
 package com.javaSpring.examen.models;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -13,7 +17,7 @@ import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "frases")
-public class Frase {
+public class Frase implements Comparable<Frase> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,16 +44,22 @@ public class Frase {
     @JoinColumn(name = "id_usuario")
     private Usuario creador;
 
+    @ManyToMany
+    @JoinTable(name = "favoritos", joinColumns = @JoinColumn(name = "id_frase"), inverseJoinColumns = @JoinColumn(name = "id_usuario"))
+    private List<Usuario> usuariosFavoritos;
+
     public Frase() {
     }
 
-    public Frase(Long id, String texto, String autor, String categoria, String idioma, Usuario creador) {
+    public Frase(Long id, String texto, String autor, String categoria, String idioma, Usuario creador,
+            List<Usuario> usuariosFavoritos) {
         this.id = id;
         this.texto = texto;
         this.autor = autor;
         this.categoria = categoria;
         this.idioma = idioma;
         this.creador = creador;
+        this.usuariosFavoritos = usuariosFavoritos;
     }
 
     public Long getId() {
@@ -100,9 +110,22 @@ public class Frase {
         this.creador = creador;
     }
 
+    public List<Usuario> getUsuariosFavoritos() {
+        return usuariosFavoritos;
+    }
+
+    public void setUsuariosFavoritos(List<Usuario> usuariosFavoritos) {
+        this.usuariosFavoritos = usuariosFavoritos;
+    }
+
     @Override
     public String toString() {
         return "Frase [id=" + id + ", texto=" + texto + ", autor=" + autor + ", categoria=" + categoria + ", idioma="
                 + idioma + ", creador=" + creador + "]";
+    }
+
+    @Override
+    public int compareTo(Frase otra) {
+        return this.texto.compareTo(otra.texto);
     }
 }

@@ -6,7 +6,7 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <title>FRASES</title>
+        <title>Mis Favoritos</title>
         <link rel="stylesheet" href="/css/styles.css" />
     </head>
     <body>
@@ -17,7 +17,7 @@
             <li><a href="/form/add">Agregar Frase</a></li>
             <li><a href="/logout">Logout</a></li>
         </ul>
-        <h2>Bienvenido de vuelta ${nombreCompletoUsuario}</h2>
+        <h2>Estas son tus frases favoritas</h2>
         <table border="1">
             <thead>
                 <th>Frase motivacional</th>
@@ -26,7 +26,7 @@
                 <th>Me gusta</th>
             </thead>
             <tbody>
-                <c:forEach var="frase" items="${frases}">
+                <c:forEach var="frase" items="${favsUsuario}">
                     <tr>
                         <td>${frase.texto}</td>
                         <td><a href="/detail/${frase.id}">Ver</a></td>
@@ -36,24 +36,10 @@
                             </c:if>
                         </td>
                         <td>
-                            <c:set var="esFav" value="false" />
-                            <c:forEach var="fav" items="${favsUsuarios}">
-                                <c:if test="${fav.id == frase.id}"> 
-                                    <c:set var="esFav" value="true" />
-                                </c:if>
-                            </c:forEach>
-                            <c:if test="${esFav}">
-                                <form:form action="/removeFav/${frase.id}">
-                                    <input type="hidden" name="_method" value="PUT"/>
-                                    <button style="font-size: 27px">&#9829;</button>
-                                </form:form>
-                            </c:if>
-                            <c:if test="${!esFav}">
-                                <form:form action="/addFav/${frase.id}">
-                                    <input type="hidden" name="_method" value="PUT"/>
-                                    <button style="font-size: 27px">&#9825;</button>
-                                </form:form>
-                            </c:if>
+                            <form:form action="/removeFav/${frase.id}">
+                                <input type="hidden" name="_method" value="PUT"/>
+                                <button style="font-size: 27px">&#9829;</button>
+                            </form:form>
                         </td>
                     </tr>
                 </c:forEach>

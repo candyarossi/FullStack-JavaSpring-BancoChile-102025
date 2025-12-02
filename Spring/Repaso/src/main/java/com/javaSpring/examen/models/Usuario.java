@@ -7,6 +7,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
@@ -45,16 +48,23 @@ public class Usuario {
     @OneToMany(mappedBy = "creador")
     private List<Frase> frasesCreadas;
 
+    @ManyToMany
+    @JoinTable(name = "favoritos", joinColumns = @JoinColumn(name = "id_usuario"), inverseJoinColumns = @JoinColumn(name = "id_frase"))
+    private List<Frase> frasesFavoritas;
+
     public Usuario() {
     }
 
-    public Usuario(Long id, String nombre, String apellido, String correo, String password, String confirmarPassword) {
+    public Usuario(Long id, String nombre, String apellido, String correo, String password, String confirmarPassword,
+            List<Frase> frasesCreadas, List<Frase> frasesFavoritas) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.password = password;
         this.confirmarPassword = confirmarPassword;
+        this.frasesCreadas = frasesCreadas;
+        this.frasesFavoritas = frasesFavoritas;
     }
 
     public Long getId() {
@@ -103,6 +113,22 @@ public class Usuario {
 
     public void setConfirmarPassword(String confirmarPassword) {
         this.confirmarPassword = confirmarPassword;
+    }
+
+    public List<Frase> getFrasesCreadas() {
+        return frasesCreadas;
+    }
+
+    public void setFrasesCreadas(List<Frase> frasesCreadas) {
+        this.frasesCreadas = frasesCreadas;
+    }
+
+    public List<Frase> getFrasesFavoritas() {
+        return frasesFavoritas;
+    }
+
+    public void setFrasesFavoritas(List<Frase> frasesFavoritas) {
+        this.frasesFavoritas = frasesFavoritas;
     }
 
     @Override
