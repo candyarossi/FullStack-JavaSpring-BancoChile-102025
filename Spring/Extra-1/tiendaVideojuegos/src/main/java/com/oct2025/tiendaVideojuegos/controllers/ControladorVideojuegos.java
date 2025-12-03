@@ -44,6 +44,12 @@ public class ControladorVideojuegos implements ManejoDeFechas {
             return "redirect:/";
         }
         List<Videojuego> misVideojuegos = this.servicioUsuarios.obtenerUsuarioPorId(usuario.getId()).getComprados();
+        Videojuego miVideojuego = this.servicioVideojuegos.obtenerVideojuegoPorUsuario(usuario.getId());
+        Boolean estaCreado = miVideojuego != null;
+        if (estaCreado) {
+            misVideojuegos.add(miVideojuego);
+        }
+        modelo.addAttribute("estaCreado", estaCreado);
         modelo.addAttribute("misVideojuegos", misVideojuegos);
         modelo.addAttribute("videojuegos", this.servicioVideojuegos.obtenerTodosLosVideojuegos());
         return "videojuegos.jsp";

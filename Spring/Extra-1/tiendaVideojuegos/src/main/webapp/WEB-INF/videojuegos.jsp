@@ -12,7 +12,9 @@
         <div class="nav">
 			<h3>¡Bienvenido/a ${usuario.nombre} ${usuario.apellido}!</h3>
 			<h3 class="precio" id="coins">$${usuario.coins}</h3>
-            <a href="/form/add">Crear Videojuego</a>
+            <c:if test="${!estaCreado}">
+				<a href="/form/add">Crear Videojuego</a>
+			</c:if>
 			<a href="/logout">Salir</a>
         </div>
         <div class="content">

@@ -33,4 +33,8 @@ public class ServicioVideojuegos {
     public void eliminar(Long id) {
         this.repositorioVideojuegos.deleteById(id);
     }
+
+    public Videojuego obtenerVideojuegoPorUsuario(Long idUsuario) {
+        return this.repositorioVideojuegos.obtenerVideojuegoPorIdUsuarioSQL(idUsuario).orElse(null);
+    }
 }
